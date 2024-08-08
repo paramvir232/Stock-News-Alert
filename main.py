@@ -7,13 +7,14 @@ STOCK = 'RELIANCE.BSE'
 COMPANY_NAME = "Reliance Industries Ltd"
 TODAY_DATE = datetime.date.today()
 
-account_sid = environ.get('account_sid')
-auth_token = environ.get('auth_token')
-api_key = environ.get('api_key')
-client = Client(account_sid, auth_token)
-
+# Twilio Details
+ACCOUNT_SID = environ.get('account_sid')
+AUTH_TOKEN = environ.get('auth_token')
+TWILIO_API_KEY = environ.get('api_key')
+TWILIO_CLIENT = Client(account_sid, auth_token)
 to_phone = environ.get('to_phone')
 from_phone = environ.get('from_phone')
+
 ## Using Stock API
 # When STOCK price increase/decreases by 5% between yesterday and the day before yesterday .
 
